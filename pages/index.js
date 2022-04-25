@@ -1,4 +1,4 @@
-import { getSession } from 'next-auth/react'
+import { getSession, signOut } from 'next-auth/react'
 
 
 
@@ -21,6 +21,9 @@ import { getSession } from 'next-auth/react'
           )
         
         }
+        <button onClick={() => signOut()}>
+          Logout
+        </button>
     
       </div>
 
