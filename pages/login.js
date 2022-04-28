@@ -7,18 +7,6 @@ function loginPage() {
     const {data: session, status} = useSession()
     const router = useRouter()
 
-    useEffect(() => {
-    (async () => {
-        const providers = await getProviders() 
-        console.log(providers)
-
-    })();
-
-}, [])
-
-
-
-
     if (status !== 'loading' && status === 'authenticated') {
         router.push('/')
     }
